@@ -1,0 +1,29 @@
+<form [formGroup]="productform" (ngSubmit)="addProduct()">
+<div>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field><br>
+      <mat-form-field>
+        <mat-label>image url</mat-label>
+        <input matInput formControlName="imageurl">
+      </mat-form-field><br>
+      <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price">
+      </mat-form-field><br>
+      <mat-form-field>
+        <mat-label>description</mat-label>
+        <input matInput formControlName="description">
+      </mat-form-field>
+      
+<mat-form-field>
+  <mat-label>category</mat-label>
+  <mat-select (selectionChange)="onselectCategory($event)" formControlName="category_id:">
+    <mat-option *ngFor="let category of categorylist" [value]="category.id">{{category.categoryname}}</mat-option>
+  </mat-select>
+</mat-form-field><br>
+      <button type="submit" class="btn btn-primary" >Add</button>
+</div>
+</form>
+

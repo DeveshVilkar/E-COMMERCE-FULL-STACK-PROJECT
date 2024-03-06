@@ -1,0 +1,81 @@
+<h1>Your Cart Items</h1>
+<div class="container1">
+  <div class="row">
+    <div class="col">
+      <h2>Bag</h2>
+      <div *ngFor="let item of cartitems" class="card mb-3" style="max-width: 540px;">
+        <div  class="row no-gutters">
+          <div class="col-md-4">
+            <img [src]="item.product.imageurl" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <div id="nameprice" class="container">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="card-title">{{item.product.name}}</h4>
+                  </div>
+                  <div class="col">
+                    <h4 class="card-text">{{item.product.price | currency:'INR'}}</h4>
+                  </div>
+                </div>
+              </div>            
+              <div id="product" class="container">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="card-text">{{item.product.description}}</h4>
+                  </div>
+                  <div class="col">
+                    <h4 id="quant" class="card-text"> Quantity 
+                      <select [(ngModel)]="item.quantity" (ngModelChange)="updateQuantity($event)">
+                        <option *ngFor="let i of quantityoption" [value]="i">{{i}}</option>
+                      </select>                     
+                     </h4>
+                  </div>  
+                </div>
+              </div>
+
+              <!-- trash -->
+              <div (click)="deleteItem({id:item.id})" class="trash">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#080808" d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+              </div>
+             
+            </div>
+          </div> 
+        </div>
+     
+      </div> 
+    </div>
+    <div class="col">
+      <div class="col">
+        <div id="cost" class="container-sm">
+          <h2>Summary</h2><br>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <h3>Total Cost  </h3>
+              </div>
+              <div *ngIf="updatedcost;else ogcost" class="col">
+                {{updatedcost | currency:'INR'}}
+              </div> 
+              <ng-template #ogcost>
+                {{totalcost | currency:'INR'}}
+              </ng-template>
+            </div>
+          </div>
+          <button type="button" class="btn btn-dark">Buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+</div>
+
+ 
+
+
+      
+   
+   
+
+      

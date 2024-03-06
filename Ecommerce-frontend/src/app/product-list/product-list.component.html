@@ -1,0 +1,23 @@
+
+<div class="content">
+  <div class="container responsive-grid">
+    <mat-card  class="example-card" *ngFor="let product of productdetail" >
+      <mat-card-header fxLayoutAlign="center">
+        <mat-card-title >{{product.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="product.imageurl">
+        <mat-card-content fxLayoutAlign="center">
+          <p>
+           {{product.price | currency:'INR'}}<br>
+          {{product.description}}<br>        
+          </p>
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="center">
+          <button mat-raised-button>Buy</button>
+          <button mat-raised-button (click)="addprocart({id:product.id})">Add to cart</button>        
+        </mat-card-actions>
+      </mat-card> 
+  </div>
+</div>
+  
+     

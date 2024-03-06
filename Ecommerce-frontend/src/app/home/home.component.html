@@ -1,0 +1,13 @@
+<app-category></app-category><br>
+<div class="container-md">
+    <div class="row">
+      <div id="filter" class="col">
+        <h1>Shop By Price</h1>
+        <app-sidenav (filteredlist2)="onFilterProductList2($event)" (filteredList1)="onFilterPoductList1($event)"></app-sidenav>
+      </div>
+      <div id="filterbig" class="col-10">
+        <app-product-list [product2]="filteredproduct2" [products1]="filteredproduct1"></app-product-list>
+      </div>
+    </div>
+</div>
+

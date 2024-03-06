@@ -1,0 +1,18 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+button{
+    margin-left:4px;
+}
+.cartsym{
+    margin-left:5px;
+    width:30px;
+    height:30px;
+}
+#headercontainer{
+    width:100%;
+    position:sticky;
+    top:0px;
+    z-index:1;
+}
+  

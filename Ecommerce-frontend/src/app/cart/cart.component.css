@@ -1,0 +1,40 @@
+h1{
+    text-align:center;
+    margin-top:30px;
+}
+.container1{
+  margin-left:150px;
+  width:1000px;
+}
+#cost{
+    margin-left:50px;
+}
+button{
+    width:200px;
+    border-radius:50px;
+    margin-left:70px;
+}
+#nameprice{
+   /* background-color:yellow; */
+   width:400px;
+   margin-left:-40px;
+}
+#product{
+    margin-left:-40px;
+}
+#quant{
+    width:100px;
+}
+.trash{
+    margin-left:-25px;
+}
+#quantitybutton{
+    width:40px;
+    margin-top:-40px;
+    height:35px;
+    
+}
+
+ng-template{
+    background-color:red;
+}

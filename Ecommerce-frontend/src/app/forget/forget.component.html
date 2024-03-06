@@ -1,0 +1,12 @@
+
+<form>
+    <h1>Verification </h1>
+    <div class="mb-3">
+      <label class="form-label labeltext">Email</label>
+      <input type="email" [(ngModel)]="mailid" >
+      <div class="invalid-feedback">
+        Please enter email
+      </div>
+    </div> 
+    <button (click)="sendOtp()">Send OTP</button>
+</form>

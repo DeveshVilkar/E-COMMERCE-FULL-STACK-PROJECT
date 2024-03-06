@@ -1,0 +1,49 @@
+<div class="outer"> 
+  <form  [formGroup]="userloginform" (ngSubmit)="loginUser()">
+    <h1>Login</h1>
+    <div class="mb-3">
+      <label class="form-label labeltext">Email address</label>
+      <input id="emailinput" type="email" class="form-control" aria-describedby="emailHelp" formControlName="email">       
+    </div>
+    <div class="mb-3">
+      <label class="form-label labeltext">Password</label>
+      <input id="passwordinput" type="password" class="form-control" formControlName="password">
+    </div> 
+    <div id="checkbox" class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" formControlName="isadmin">
+      <label class="form-check-label" for="flexCheckDefault">
+        Admin
+      </label>
+    </div>    
+    <button id="loginbutton" type="submit">Log In</button><br>
+    <button id="forget" (click)="openEmailDialog()">Forget Password</button>
+  </form><br>
+</div>
+
+
+
+
+<!-- <div id="loginform" class="container-md">
+  <h1>Log In</h1><br>
+  <form  [formGroup]="userloginform" (ngSubmit)="loginUser()">
+    <div class="mb-3">
+      <label class="form-label labeltext">Email address</label>
+      <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email">       
+    </div>
+    <div class="mb-3">
+      <label class="form-label labeltext">Password</label>
+      <input type="password" class="form-control" formControlName="password">
+    </div> 
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" formControlName="isadmin">
+      <label class="form-check-label" for="flexCheckDefault">
+        Admin
+      </label>
+    </div>    
+    <button id="loginbutton" type="submit" class="btn btn-dark">Log In</button>
+  </form><br>
+  <button (click)="openEmailDialog()">Forget Password</button>
+</div> -->
+    
+
+

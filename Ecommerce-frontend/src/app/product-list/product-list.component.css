@@ -1,0 +1,17 @@
+.container{
+  padding:24px;
+}
+img{
+  height:200px;
+  width:100%;
+  object-fit:cover;
+}
+
+.responsive-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+  gap:24px;
+}
+button{
+  margin-left:20px
+}
